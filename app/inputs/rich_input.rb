@@ -6,6 +6,7 @@ if (Object.const_defined?("Formtastic") && Gem.loaded_specs["formtastic"].versio
       scope_type = object_name
       scope_id = object.id
       editor_options = Rich.options(options[:config], scope_type, scope_id)
+      dom_id = options[:input_html][:id] || self.dom_id
 
       input_wrapping do
         label_html <<
